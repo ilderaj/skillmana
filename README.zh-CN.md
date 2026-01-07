@@ -303,15 +303,56 @@ npm run typecheck
   - 带实时进度的交互式更新视图
   - 刷新/安装/强制重装快捷键
 
-### 🚧 计划中 (v1.1.x)
+### 🚧 计划中 (v1.1.x - 性能与优化)
 
-- [ ] TUI 性能优化
+- [ ] **TUI 性能优化**
+  - 大型 skill 列表的懒加载
+  - 虚拟滚动以提升内存效率
+  - 更快的 skill 索引和缓存
+  - 减少启动时间
 - [ ] 不同终端尺寸的响应式布局
 - [ ] Skill 模板和脚手架
 - [ ] 自定义扩展的插件系统
+
+### 🎯 计划中 (v1.2.x - Skills 商店集成)
+
+- [ ] **SkillsMP 商店集成** ([skillsmp.com](https://skillsmp.com/))
+  - 浏览和搜索 49,000+ 社区 skills
+  - 一键从商店安装 skill
+  - Skill 评分、热度和质量指标
+  - 按分类发现 skills
+- [ ] **通过 URL 安装 Skills**
+  - GitHub 仓库链接（`skillmana add https://github.com/user/repo`）
+  - GitHub 原始文件链接
+  - SkillsMP 直链（`skillmana add https://skillsmp.com/skills/skill-name`）
+  - 支持私有仓库认证
+- [ ] **依赖管理**
+  - 在 SKILL.md 中声明 skill 依赖
+  - 自动依赖解析和安装
+  - 依赖冲突检测
+  - 依赖树可视化
+
+### 🌐 计划中 (v2.0.x - WebApp 及更多)
+
+- [ ] **SkillMana WebApp**
+  - 基于 Web 的 skill 管理仪表盘
+  - 可视化 skill 编辑器和预览
+  - 跨设备 skill 同步
+  - 团队协作功能
 - [ ] Skill 版本控制和回滚
-- [ ] Skills 之间的依赖管理
-- [ ] 云同步（可选）
+- [ ] Skill 更新通知
+- [ ] 个人 skill 库云同步
+- [ ] 导出/导入 skill 集合
+- [ ] 基于项目上下文的 AI 智能 skill 推荐
+
+### 💡 未来构想
+
+- [ ] Skill 分析和使用统计
+- [ ] 社区 skill 分享和发布
+- [ ] Skill 打包（将多个 skills 合并为一个）
+- [ ] 多语言 skill 支持
+- [ ] IDE 扩展（VS Code、JetBrains）
+- [ ] Skill 测试框架
 
 ## 🤝 贡献
 

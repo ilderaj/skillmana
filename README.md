@@ -303,15 +303,56 @@ npm run typecheck
   - Interactive update view with real-time progress
   - Keyboard shortcuts for refresh/install/force reinstall
 
-### 🚧 Planned (v1.1.x)
+### 🚧 Planned (v1.1.x - Performance & Polish)
 
-- [ ] TUI performance optimization
+- [ ] **TUI Performance Optimization**
+  - Lazy loading for large skill lists
+  - Virtual scrolling for better memory efficiency
+  - Faster skill indexing and caching
+  - Reduced startup time
 - [ ] Responsive layout for different terminal sizes
 - [ ] Skill templates and scaffolding
 - [ ] Plugin system for custom extensions
+
+### 🎯 Planned (v1.2.x - Skills Marketplace Integration)
+
+- [ ] **SkillsMP Marketplace Integration** ([skillsmp.com](https://skillsmp.com/))
+  - Browse and search 49,000+ community skills
+  - One-command skill installation from marketplace
+  - Skill ratings, popularity, and quality indicators
+  - Category-based discovery
+- [ ] **Install Skills via URL**
+  - GitHub repository links (`skillmana add https://github.com/user/repo`)
+  - GitHub raw file links
+  - SkillsMP direct links (`skillmana add https://skillsmp.com/skills/skill-name`)
+  - Support for private repositories with authentication
+- [ ] **Dependency Management**
+  - Skill dependency declaration in SKILL.md
+  - Automatic dependency resolution and installation
+  - Dependency conflict detection
+  - Dependency tree visualization
+
+### 🌐 Planned (v2.0.x - WebApp & Beyond)
+
+- [ ] **SkillMana WebApp**
+  - Web-based skill management dashboard
+  - Visual skill editor and preview
+  - Cross-device skill synchronization
+  - Team collaboration features
 - [ ] Skill versioning and rollback
-- [ ] Dependency management between skills
-- [ ] Cloud sync (optional)
+- [ ] Skill update notifications
+- [ ] Cloud sync for personal skill library
+- [ ] Export/Import skill collections
+- [ ] AI-powered skill recommendations based on project context
+
+### 💡 Future Ideas
+
+- [ ] Skill analytics and usage statistics
+- [ ] Community skill sharing and publishing
+- [ ] Skill bundling (combine multiple skills into one)
+- [ ] Multi-language skill support
+- [ ] IDE extensions (VS Code, JetBrains)
+- [ ] Skill testing framework
 
 ## 🤝 Contributing
 
