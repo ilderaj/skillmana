@@ -298,6 +298,10 @@ npm run typecheck
   - Real-time search
   - Routing configuration
   - Keyboard navigation (vim-style)
+- [x] **TUI Update Enhancement** (v1.0.4)
+  - Fixed Anthropic skills download URL
+  - Interactive update view with real-time progress
+  - Keyboard shortcuts for refresh/install/force reinstall
 
 ### 🚧 Planned (v1.1.x)
 

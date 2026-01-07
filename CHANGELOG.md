@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-01-07
+
+### Fixed
+
+- **Anthropic Skills Download**: Fixed URL path for downloading official skills from GitHub (added `/skills` subdirectory)
+
+### Added
+
+- **TUI Update View**: Complete rewrite with actual update functionality
+  - Auto-check for updates when entering update view
+  - Keyboard shortcuts: `[r]` refresh, `[Enter]` install new, `[f]` force reinstall
+  - Real-time installation progress display
+  - Installed/available skills list with status indicators
+- **useUpdate Hook**: New React hook for managing Anthropic skills updates in TUI
+
+## [1.0.3] - 2026-01-07
+
+### Added
+
+- **Interactive TUI Mode** - `skillmana tui`
+  - Dashboard with statistics (total skills, categories, routing level)
+  - Skills browser with preview panel
+  - Real-time fuzzy search
+  - Routing configuration view
+  - Update view for Anthropic skills
+  - Vim-style keyboard navigation (j/k, g/G, /)
+  - Help panel with keyboard shortcuts
+  - Multiple view aliases: `ui`, `interactive`
+
 ## [1.0.2] - 2026-01-07
 
 ### Changed
@@ -117,7 +146,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-[Unreleased]: https://github.com/ilderaj/skillmana/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/ilderaj/skillmana/compare/v1.0.4...HEAD
+[1.0.4]: https://github.com/ilderaj/skillmana/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/ilderaj/skillmana/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/ilderaj/skillmana/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/ilderaj/skillmana/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ilderaj/skillmana/releases/tag/v1.0.0
