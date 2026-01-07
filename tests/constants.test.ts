@@ -15,7 +15,7 @@ describe('Constants', () => {
     });
 
     it('should have correct CLI version', () => {
-      expect(CLI_VERSION).toBe('1.0.0');
+      expect(CLI_VERSION).toBe('1.0.4');
     });
   });
 

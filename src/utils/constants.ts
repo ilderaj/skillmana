@@ -165,8 +165,9 @@ export const ANTHROPIC_SKILLS_REPO = 'https://github.com/anthropics/skills';
 
 /**
  * Anthropic skills raw content URL
+ * Skills are located in the /skills subdirectory of the repository
  */
-export const ANTHROPIC_SKILLS_RAW_URL = 'https://raw.githubusercontent.com/anthropics/skills/main';
+export const ANTHROPIC_SKILLS_RAW_URL = 'https://raw.githubusercontent.com/anthropics/skills/main/skills';
 
 /**
  * List of official Anthropic skills
@@ -202,7 +203,7 @@ export const CLI_NAME = 'skillmana';
 /**
  * CLI version (should match package.json)
  */
-export const CLI_VERSION = '1.0.3';
+export const CLI_VERSION = '1.0.4';
 
 /**
  * CLI description

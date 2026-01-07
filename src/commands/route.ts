@@ -7,7 +7,6 @@
 import chalk from 'chalk';
 import boxen from 'boxen';
 import { logger } from '../utils/logger.js';
-import { configManager } from '../core/config.js';
 import { router } from '../core/router.js';
 import type { RoutingLevel } from '../types/index.js';
 
@@ -31,7 +30,6 @@ interface RouteOptions {
  * Show current routing status
  */
 async function showStatus(): Promise<void> {
-  const globalConfig = await configManager.getGlobalConfig();
   const routerConfig = router.getConfig();
 
   const statusLines = [

@@ -5,7 +5,6 @@
  */
 
 import fs from 'fs-extra';
-import { join } from 'node:path';
 import { parser } from './parser.js';
 import { registry } from './registry.js';
 import { storage } from './storage.js';

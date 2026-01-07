@@ -3,7 +3,6 @@
  * TUI 入口文件
  */
 
-import React from 'react';
 import { render } from 'ink';
 import { App } from './App.js';
 import type { ViewType } from './store/types.js';

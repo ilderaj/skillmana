@@ -95,14 +95,19 @@ export function useKeyboard(options: UseKeyboardOptions = {}): void {
 
     // Tab 切换
     if (key.tab) {
-      if (currentView === 'dashboard') {
-        goToSkills();
-      } else if (currentView === 'skills') {
-        goToRouting();
-      } else if (currentView === 'routing') {
-        goToUpdate();
-      } else if (currentView === 'update') {
-        goToDashboard();
+      switch (currentView) {
+        case 'skills':
+          goToRouting();
+          break;
+        case 'routing':
+          goToUpdate();
+          break;
+        case 'update':
+          goToDashboard();
+          break;
+        default:
+          goToSkills();
+          break;
       }
     }
   }, { isActive: enabled });

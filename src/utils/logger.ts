@@ -4,7 +4,7 @@
 
 import chalk from 'chalk';
 import ora, { type Ora } from 'ora';
-import boxen from 'boxen';
+import boxen, { type Options as BoxenOptions } from 'boxen';
 
 // ============================================================================
 // Types
@@ -210,17 +210,14 @@ class Logger {
    * Display a box with content
    */
   box(content: string, title?: string): void {
-    const options: boxen.Options = {
+    const options: BoxenOptions = {
       padding: 1,
       margin: 1,
       borderStyle: 'round',
       borderColor: 'cyan',
+      title: title,
+      titleAlignment: title ? 'center' : undefined,
     };
-
-    if (title) {
-      options.title = title;
-      options.titleAlignment = 'center';
-    }
 
     console.log(boxen(content, options));
   }

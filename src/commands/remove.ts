@@ -23,12 +23,12 @@ export async function removeCommand(name: string, options: RemoveOptions): Promi
 
   try {
     // Find skill
-    let skill = await registry.getSkill(name);
+    let skill: { id: string; name: string; path: string; source: string } | null = await registry.getSkill(name);
 
     // If not found by ID, search by name
     if (!skill) {
       const skills = await registry.searchSkills(name);
-      skill = skills.find((s) => s.name.toLowerCase() === name.toLowerCase());
+      skill = skills.find((s) => s.name.toLowerCase() === name.toLowerCase()) ?? null;
       
       if (!skill && skills.length > 0) {
         // Show matches and let user choose
@@ -66,7 +66,7 @@ export async function removeCommand(name: string, options: RemoveOptions): Promi
 /**
  * Add skill to project exclude list
  */
-async function excludeFromProject(skillId: string, options: RemoveOptions): Promise<boolean> {
+async function excludeFromProject(skillId: string, _options: RemoveOptions): Promise<boolean> {
   const projectPath = process.cwd();
   const projectConfig = await configManager.getProjectConfig(projectPath);
 

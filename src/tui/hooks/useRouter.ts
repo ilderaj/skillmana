@@ -6,7 +6,6 @@
 import { useCallback } from 'react';
 import { useTUI } from '../store/context.js';
 import type { RoutingLevel } from '../store/types.js';
-import { configManager } from '../../core/config.js';
 
 export interface UseRouterReturn {
   routingLevel: RoutingLevel;
@@ -18,7 +17,7 @@ export function useRouter(): UseRouterReturn {
 
   const setRoutingLevel = useCallback(async (level: RoutingLevel) => {
     try {
-      await configManager.set('routingLevel', level);
+      // Update state directly - config persistence can be added later if needed
       dispatch({ type: 'SET_ROUTING_LEVEL', payload: level });
     } catch (error) {
       dispatch({

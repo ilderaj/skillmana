@@ -17,12 +17,8 @@ const ROUTING_LEVELS: Array<{ level: RoutingLevel; description: string; max: num
 ];
 
 export const RoutingConfig: React.FC = () => {
-  const { state, dispatch } = useTUI();
+  const { state } = useTUI();
   const [testQuery, setTestQuery] = useState('');
-
-  const handleLevelChange = (level: RoutingLevel) => {
-    dispatch({ type: 'SET_ROUTING_LEVEL', payload: level });
-  };
 
   return (
     <Box flexDirection="column" paddingX={2} paddingY={1}>

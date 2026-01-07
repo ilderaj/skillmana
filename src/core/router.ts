@@ -6,7 +6,7 @@
 
 import type { Skill, SkillDomain, RoutingLevel, UserIntent, Complexity } from '../types/index.js';
 import { registry } from './registry.js';
-import { classifier, DOMAIN_KEYWORDS } from './classifier.js';
+import { classifier } from './classifier.js';
 import { logger } from '../utils/logger.js';
 
 // ============================================================================

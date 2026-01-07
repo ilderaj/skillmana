@@ -7,7 +7,6 @@
 import chalk from 'chalk';
 import ora from 'ora';
 import inquirer from 'inquirer';
-import boxen from 'boxen';
 import { logger } from '../utils/logger.js';
 import { anthropicDownloader } from '../core/anthropic.js';
 import type { DownloadResult, UpdateInfo } from '../core/anthropic.js';

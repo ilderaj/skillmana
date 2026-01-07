@@ -4,7 +4,6 @@
  * Initialize SkillMana in the current project.
  */
 
-import { join } from 'node:path';
 import chalk from 'chalk';
 import { storage, configManager, symlink } from '../core/index.js';
 import { logger } from '../utils/logger.js';
@@ -75,7 +74,6 @@ export async function initCommand(options: InitOptions): Promise<InitResult> {
 
     // Step 3: Create .cursor directory
     logger.startSpinner(`Creating ${CURSOR_DIR_NAME} directory...`);
-    const cursorDir = join(projectPath, CURSOR_DIR_NAME);
     
     // The symlink manager will create parent directories as needed
     logger.spinnerSuccess(`${CURSOR_DIR_NAME} directory ready`);
@@ -139,7 +137,7 @@ export async function initCommand(options: InitOptions): Promise<InitResult> {
 /**
  * Display success message
  */
-function displaySuccessMessage(projectPath: string, options: InitOptions): void {
+function displaySuccessMessage(_projectPath: string, options: InitOptions): void {
   console.log('');
   console.log(chalk.green.bold('🎉 Done! SkillMana initialized.'));
   console.log('');

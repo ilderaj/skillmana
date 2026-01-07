@@ -7,9 +7,6 @@
 import fs from 'fs-extra';
 import { join } from 'node:path';
 import type { Skill, SkillDomain } from '../types/index.js';
-import { parser } from './parser.js';
-import { registry } from './registry.js';
-import { classifier } from './classifier.js';
 import { GLOBAL_SKILLS_DIR } from '../utils/constants.js';
 import { logger } from '../utils/logger.js';
 

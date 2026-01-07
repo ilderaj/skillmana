@@ -4,10 +4,9 @@
  * Automatically classifies skills based on content, metadata, and path.
  */
 
-import type { Skill, SkillDomain, Category } from '../types/index.js';
+import type { Skill, SkillDomain } from '../types/index.js';
 import type { SkillFrontmatter } from './parser.js';
 import { DEFAULT_CATEGORIES } from '../utils/constants.js';
-import { logger } from '../utils/logger.js';
 
 // ============================================================================
 // Types
@@ -92,7 +91,7 @@ export const DOMAIN_KEYWORDS: Record<SkillDomain, string[]> = {
 /**
  * Category-specific keywords (extends DEFAULT_CATEGORIES)
  */
-const CATEGORY_KEYWORDS: Record<string, string[]> = {};
+const CATEGORY_KEYWORDS: Record<string, readonly string[]> = {};
 DEFAULT_CATEGORIES.forEach(cat => {
   CATEGORY_KEYWORDS[cat.id] = cat.keywords;
 });

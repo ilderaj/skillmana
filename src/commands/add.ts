@@ -8,10 +8,10 @@ import fs from 'fs-extra';
 import { join, basename } from 'node:path';
 import chalk from 'chalk';
 import got from 'got';
-import { storage, registry, parser, scanner } from '../core/index.js';
+import { storage, registry, parser } from '../core/index.js';
 import { logger } from '../utils/logger.js';
 import { GLOBAL_SKILLS_DIR, DEFAULT_CATEGORIES } from '../utils/constants.js';
-import type { AddOptions, Skill } from '../types/index.js';
+import type { AddOptions } from '../types/index.js';
 
 // ============================================================================
 // Types
@@ -50,7 +50,7 @@ function parseSource(source: string): ParsedSource {
 /**
  * Determine category for skill
  */
-function determineCategory(skillName: string, options: AddOptions): string {
+function determineCategory(_skillName: string, options: AddOptions): string {
   if (options.category) {
     // Validate category
     const validCategory = DEFAULT_CATEGORIES.find(
