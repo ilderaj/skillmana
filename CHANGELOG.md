@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-01-07
+
+### Changed
+
+- Remove npm publishing, use GitHub-only distribution
+- Simplify installation to clone from GitHub
+- Update release workflow for GitHub releases only
+
 ## [1.0.1] - 2026-01-07
 
 ### Added
@@ -109,6 +117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-[Unreleased]: https://github.com/ilderaj/skillmana/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/ilderaj/skillmana/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/ilderaj/skillmana/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/ilderaj/skillmana/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ilderaj/skillmana/releases/tag/v1.0.0
