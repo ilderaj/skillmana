@@ -74,6 +74,7 @@ skillmana info frontend-design
 | `disable <name>` | Disable a skill in current project |
 | `route` | Configure auto-routing settings |
 | `update` | Update Anthropic official skills |
+| `tui` | Launch interactive terminal UI (aliases: `ui`, `interactive`) |
 | `doctor` | Diagnose environment issues |
 
 ### Command Examples
@@ -119,6 +120,12 @@ skillmana route --level full    # L3: Full skills
 
 # Test routing with a query
 skillmana route --test "Create a React component"
+
+# Launch interactive TUI
+skillmana tui                   # Open dashboard
+skillmana tui --view skills     # Open skills browser
+skillmana tui --view search     # Open search view
+skillmana tui --view routing    # Open routing config
 ```
 
 ## 🧭 Smart Routing
@@ -271,6 +278,8 @@ npm run typecheck
 
 ## 🗺️ Roadmap
 
+### ✅ Completed (v1.0.x)
+
 - [x] Core CLI framework
 - [x] Global skills management
 - [x] Project initialization with symlinks
@@ -281,9 +290,22 @@ npm run typecheck
 - [x] Skill classifier
 - [x] Core skills merger
 - [x] Anthropic skills auto-update
-- [ ] Interactive TUI mode
-- [ ] Skill templates
-- [ ] Plugin system
+- [x] **Interactive TUI mode** (v1.0.3) - `skillmana tui`
+  - Dashboard with statistics
+  - Skills browser with preview
+  - Real-time search
+  - Routing configuration
+  - Keyboard navigation (vim-style)
+
+### 🚧 Planned (v1.1.x)
+
+- [ ] TUI performance optimization
+- [ ] Responsive layout for different terminal sizes
+- [ ] Skill templates and scaffolding
+- [ ] Plugin system for custom extensions
+- [ ] Skill versioning and rollback
+- [ ] Dependency management between skills
+- [ ] Cloud sync (optional)
 
 ## 🤝 Contributing
 
