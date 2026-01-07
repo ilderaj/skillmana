@@ -33,7 +33,7 @@ yarn global add skillmana
 ### From Source
 
 ```bash
-git clone https://github.com/your-username/skillmana.git
+git clone https://github.com/ilderaj/skillmana.git
 cd skillmana
 npm install
 npm run build

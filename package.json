@@ -30,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/skillmana.git"
+    "url": "https://github.com/ilderaj/skillmana.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/skillmana/issues"
+    "url": "https://github.com/ilderaj/skillmana/issues"
   },
-  "homepage": "https://github.com/your-username/skillmana#readme",
+  "homepage": "https://github.com/ilderaj/skillmana#readme",
   "engines": {
     "node": ">=18.0.0"
   },
