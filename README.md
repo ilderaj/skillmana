@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/ilderaj/skillmana)](https://github.com/ilderaj/skillmana/releases)
 
+English | [简体中文](./README.zh-CN.md)
+
 SkillMana helps you manage, categorize, and route Cursor Skills efficiently. It provides a centralized way to organize skills globally while allowing project-specific customization through symlinks.
 
 ## ✨ Features
