@@ -2,8 +2,8 @@
 
 > 🎯 A local CLI tool for managing Cursor Skills
 
-[![npm version](https://img.shields.io/npm/v/skillmana.svg)](https://www.npmjs.com/package/skillmana)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/ilderaj/skillmana)](https://github.com/ilderaj/skillmana/releases)
 
 SkillMana helps you manage, categorize, and route Cursor Skills efficiently. It provides a centralized way to organize skills globally while allowing project-specific customization through symlinks.
 
@@ -20,25 +20,21 @@ SkillMana helps you manage, categorize, and route Cursor Skills efficiently. It 
 ## 📦 Installation
 
 ```bash
-# Using npm
-npm install -g skillmana
-
-# Using pnpm
-pnpm add -g skillmana
-
-# Using yarn
-yarn global add skillmana
-```
-
-### From Source
-
-```bash
+# Clone the repository
 git clone https://github.com/ilderaj/skillmana.git
 cd skillmana
+
+# Install dependencies
 npm install
+
+# Build
 npm run build
+
+# Link globally
 npm link
 ```
+
+After installation, you can use `skillmana` command from anywhere.
 
 ## 🚀 Quick Start
 
