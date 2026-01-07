@@ -28,4 +28,3 @@ tsconfig.json
 *.log
 *.md
 !README.md
-!LICENSE
