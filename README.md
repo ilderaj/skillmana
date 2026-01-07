@@ -43,20 +43,23 @@ npm link
 ## 🚀 Quick Start
 
 ```bash
-# 1. Sync existing skills from ~/.cursor-skills (if you have them)
+# 1. Install official Anthropic skills
+skillmana update
+
+# 2. Sync existing skills from ~/.cursor-skills (if you have them)
 skillmana sync
 
-# 2. Initialize SkillMana in your project
+# 3. Initialize SkillMana in your project
 cd your-project
 skillmana init
 
-# 3. List all available skills
+# 4. List all available skills
 skillmana list
 
-# 4. Search for specific skills
+# 5. Search for specific skills
 skillmana search "stripe"
 
-# 5. Get detailed info about a skill
+# 6. Get detailed info about a skill
 skillmana info frontend-design
 ```
 
@@ -100,9 +103,70 @@ skillmana remove my-skill --force
 
 # Exclude skill from current project only
 skillmana remove my-skill --local
+
+# Update all Anthropic skills
+skillmana update
+
+# Check for updates without installing
+skillmana update --check
+
+# List available Anthropic skills
+skillmana update --list
+
+# Force re-download all skills
+skillmana update --force
+
+# Configure routing level
+skillmana route --level core    # L1: Only core skills
+skillmana route --level auto    # L2: Adaptive (default)
+skillmana route --level full    # L3: Full skills
+
+# Test routing with a query
+skillmana route --test "Create a React component"
 ```
 
-## Directory Structure
+## 🧭 Smart Routing
+
+SkillMana includes an intelligent routing engine that automatically selects the most appropriate skills based on your query:
+
+### Routing Levels
+
+| Level | Description | Max Skills |
+|-------|-------------|------------|
+| `core` | Only core skills - minimal tokens | 1 |
+| `auto` | Adaptive selection based on complexity | 3 |
+| `full` | Full skills for maximum capability | 5 |
+
+### Intent Detection
+
+The router automatically detects your intent:
+
+- **BUILD**: Creating new features (`create`, `build`, `implement`)
+- **FIX**: Bug fixing (`fix`, `debug`, `resolve`)
+- **TEST**: Writing tests (`test`, `spec`, `coverage`)
+- **DESIGN**: UI/UX work (`design`, `layout`, `style`)
+- **ANALYZE**: Code analysis (`review`, `audit`, `check`)
+- **DOCUMENT**: Documentation (`doc`, `readme`, `guide`)
+- **OPTIMIZE**: Performance work (`optimize`, `improve`, `speed`)
+
+### Usage
+
+```bash
+# Enable auto-routing
+skillmana route --enable
+
+# Test routing
+skillmana route --test "Build a payment form with Stripe"
+# Output:
+#   Intent: BUILD
+#   Domain: payment
+#   Selected: stripe-checkout, frontend-design
+
+# Set to core-only mode
+skillmana route --level core
+```
+
+## 📂 Directory Structure
 
 ```
 ~/.skillmana/                    # Global root
@@ -116,7 +180,11 @@ skillmana remove my-skill --local
 │   └── custom/                  # User custom skills
 ├── rules/                       # Routing rules
 ├── config/                      # Configuration
-└── registry/                    # Skills registry
+│   └── settings.json
+├── registry/                    # Skills registry
+│   └── index.json
+└── cache/                       # Cache data
+    └── anthropic/
 
 /your-project/.cursor/           # Project configuration
 ├── skills -> ~/.skillmana/skills   # Symlink to global
@@ -124,13 +192,15 @@ skillmana remove my-skill --local
 └── skillmana.json               # Project-specific config
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 ### Global Config (`~/.skillmana/config/settings.json`)
 
 ```json
 {
   "version": "1.0.0",
+  "skillsPath": "~/.skillmana/skills",
+  "rulesPath": "~/.skillmana/rules",
   "preferences": {
     "defaultScope": "global",
     "verboseOutput": false,
@@ -151,28 +221,40 @@ skillmana remove my-skill --local
 }
 ```
 
-## Auto-Routing
+## 🤖 Anthropic Skills
 
-SkillMana can automatically select the appropriate skill based on your task:
+SkillMana can automatically download and manage official skills from the [Anthropic Skills Repository](https://github.com/anthropics/skills):
+
+| Skill | Description |
+|-------|-------------|
+| `frontend-design` | Modern UI/UX design patterns |
+| `webapp-testing` | Web application testing |
+| `mcp-builder` | MCP server development |
+| `xlsx` | Excel file processing |
+| `pdf` | PDF document handling |
+| `docx` | Word document processing |
+| `pptx` | PowerPoint presentations |
+| `canvas-design` | HTML Canvas graphics |
+| `brand-guidelines` | Brand identity design |
+| `skill-creator` | Create custom skills |
+| ...and more | |
 
 ```bash
-# Enable auto-routing
-skillmana route --enable
+# List all available Anthropic skills
+skillmana update --list
 
-# Set routing level
-skillmana route --level core   # Use only core skills
-skillmana route --level full   # Use full skills
-skillmana route --level auto   # Auto-select (default)
+# Install all skills
+skillmana update
 
-# Disable auto-routing
-skillmana route --disable
+# Install specific skill
+skillmana update frontend-design
 ```
 
 ## 🛠️ Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/skillmana.git
+git clone https://github.com/ilderaj/skillmana.git
 cd skillmana
 
 # Install dependencies
@@ -199,14 +281,23 @@ npm run typecheck
 - [x] Skills registry and scanning
 - [x] Add/Remove/List/Search/Info commands
 - [x] Sync from legacy directory
-- [ ] Smart routing engine
-- [ ] Anthropic skills auto-update
+- [x] Smart routing engine
+- [x] Skill classifier
+- [x] Core skills merger
+- [x] Anthropic skills auto-update
 - [ ] Interactive TUI mode
 - [ ] Skill templates
+- [ ] Plugin system
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 

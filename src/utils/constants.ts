@@ -202,7 +202,7 @@ export const CLI_NAME = 'skillmana';
 /**
  * CLI version (should match package.json)
  */
-export const CLI_VERSION = '1.0.0';
+export const CLI_VERSION = '1.0.1';
 
 /**
  * CLI description

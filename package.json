@@ -1,6 +1,6 @@
 {
   "name": "skillmana",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A local CLI tool for managing Cursor Skills - add, remove, categorize, and route skills with ease",
   "type": "module",
   "main": "dist/index.js",

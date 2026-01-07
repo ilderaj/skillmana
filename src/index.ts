@@ -10,7 +10,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import { CLI_NAME, CLI_VERSION, CLI_DESCRIPTION } from './utils/constants.js';
 import { logger } from './utils/logger.js';
-import { createInitAction, createListAction, createSearchAction, createInfoAction, createSyncAction, createAddAction, createRemoveAction } from './commands/index.js';
+import { createInitAction, createListAction, createSearchAction, createInfoAction, createSyncAction, createAddAction, createRemoveAction, createRouteAction, createUpdateAction } from './commands/index.js';
 
 // ============================================================================
 // CLI Setup
@@ -118,24 +118,17 @@ program
   .option('--disable', 'Disable auto-routing')
   .option('--level <level>', 'Set routing level (core, full, auto)')
   .option('--status', 'Show current routing status')
-  .action(async (options) => {
-    logger.info('Route command called');
-    logger.debug(`Options: ${JSON.stringify(options)}`);
-    // TODO: Implement route command
-    logger.warn('Route command not yet implemented');
-  });
+  .option('--test <query>', 'Test routing with a query')
+  .action(createRouteAction());
 
 // Update command
 program
-  .command('update')
+  .command('update [skill]')
   .description('Update Anthropic official skills')
   .option('-f, --force', 'Force update even if up to date')
-  .action(async (options) => {
-    logger.info('Update command called');
-    logger.debug(`Options: ${JSON.stringify(options)}`);
-    // TODO: Implement update command
-    logger.warn('Update command not yet implemented');
-  });
+  .option('-c, --check', 'Check for updates without installing')
+  .option('-l, --list', 'List all available Anthropic skills')
+  .action(createUpdateAction());
 
 // Sync command
 program
