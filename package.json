@@ -1,6 +1,6 @@
 {
   "name": "skillmana",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A local CLI tool for managing Cursor Skills - add, remove, categorize, and route skills with ease",
   "type": "module",
   "main": "dist/index.js",
@@ -41,20 +41,26 @@
   },
   "private": true,
   "dependencies": {
+    "boxen": "^8.0.1",
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
     "conf": "^13.0.1",
     "fs-extra": "^11.2.0",
     "glob": "^10.4.5",
     "got": "^14.4.5",
+    "ink": "^6.6.0",
+    "ink-select-input": "^6.2.0",
+    "ink-spinner": "^5.0.0",
+    "ink-text-input": "^6.0.0",
     "inquirer": "^12.3.2",
     "ora": "^8.1.1",
-    "boxen": "^8.0.1",
+    "react": "^19.2.3",
     "yaml": "^2.6.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.10.5",
+    "@types/react": "^19.2.7",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"

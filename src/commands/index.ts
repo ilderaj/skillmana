@@ -11,3 +11,4 @@ export { addCommand, createAddAction } from './add.js';
 export { removeCommand, createRemoveAction } from './remove.js';
 export { createRouteAction } from './route.js';
 export { createUpdateAction } from './update.js';
+export { tuiCommand } from './tui.js';

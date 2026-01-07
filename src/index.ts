@@ -10,7 +10,7 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import { CLI_NAME, CLI_VERSION, CLI_DESCRIPTION } from './utils/constants.js';
 import { logger } from './utils/logger.js';
-import { createInitAction, createListAction, createSearchAction, createInfoAction, createSyncAction, createAddAction, createRemoveAction, createRouteAction, createUpdateAction } from './commands/index.js';
+import { createInitAction, createListAction, createSearchAction, createInfoAction, createSyncAction, createAddAction, createRemoveAction, createRouteAction, createUpdateAction, tuiCommand } from './commands/index.js';
 
 // ============================================================================
 // CLI Setup
@@ -145,6 +145,9 @@ program
     // TODO: Implement doctor command
     logger.warn('Doctor command not yet implemented');
   });
+
+// TUI command
+program.addCommand(tuiCommand);
 
 // ============================================================================
 // Error Handling
